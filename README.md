@@ -22,8 +22,6 @@ wasm-toml-js is available via npm.
 Usage
 -----
 
-### Usage
-
 ```js
 const toml = require("wasm-toml-js");
 const tomlContent = `# This is a TOML document.
