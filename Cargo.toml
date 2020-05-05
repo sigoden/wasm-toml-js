@@ -1,8 +1,14 @@
 [package]
 name = "wasm-toml-js"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["sigoden <sigoden@gmail.com>"]
 edition = "2018"
+readme = "README.md"
+homepage = "https://github.com/sigoden/wasm-toml-js"
+repository = "https://github.com/sigoden/wasm-toml-js"
+license-file = "LICENSE"
+license = "MIT"
+keywords = ["toml","parser"]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
