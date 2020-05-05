@@ -1,4 +1,4 @@
-TOML Parser for Node.js
+TOML format for Node.js
 =======================
 
 [![Build Status](https://travis-ci.org/sigoden/wasm-toml-js.png?branch=master)](https://travis-ci.org/sigoden/wasm-toml-js)
@@ -23,16 +23,17 @@ Usage
 -----
 
 ```js
-const toml = require("wasm-toml-js");
-const tomlContent = `# This is a TOML document.
-title = "TOML Example"
+const { parse, stringify } = require("../pkg");
+const assert = require("assert");
+const tomlContent = `title = 'TOML Example'
 
 [owner]
-name = "Tom Preston-Werner"
-dob = 1979-05-27T07:32:00-08:00 # First class dates
+name = 'Tom Preston-Werner'
 `
-const output = toml.parse(tomlContent); 
-console.log(JSON.stringify(output, null, 2)); 
+const jsonValue = parse(tomlContent); 
+const tomlString = stringify(jsonValue);
+
+assert.deepEqual(tomlContent, tomlString);
 ```
 
 License
